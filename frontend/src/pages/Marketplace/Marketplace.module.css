@@ -1,0 +1,131 @@
+.dashboard{
+    background:#ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.body{
+    background:#E5E5E5;
+    flex: 80%;
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+}
+
+.header{
+    flex: 20%;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;
+    position:absolute;
+    top:22px;
+    left: 30px;
+}
+
+.logbutton{
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    position: absolute;
+    width:133px;
+    height:44px;
+    left:1247px;
+    top:22px;
+    background:#142683;
+    color:white;
+    border-radius:5px;
+}
+
+.topcard{
+    position: relative;
+    width:1240px;
+    height:186px;
+    left:100px;
+    /* top:148px; */
+    background:#C3E7FD;
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.topcardphoto{
+    position: absolute;
+    width: 294px;
+    height: 186px;
+    z-index: 10000;
+}
+
+.semicircle{
+    position: absolute;
+    width: 407px;
+    height: 186px;
+    background: #D3B4F6;
+    border-radius: 1000px 0px 0px 1000px;
+    transform: rotate(-180deg);
+}
+
+.toptext{
+    position: absolute;
+    width: 495px;
+    height: 98px;
+    left: 457px;
+    top:20px;
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 30px;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+    color: #1E272E;
+
+}
+.bottomtext{
+    position: absolute;
+    width: 319px;
+    height: 36px;
+    top:60px;
+    left: 457px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    color: #566474;
+}
+.viewButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    position: absolute;
+    width: 133px;
+    height: 44px;
+    left: 84%;
+    top:30%;
+    background: #1E272E;
+    border-radius: 5px;
+    color:white;
+}
+.cards{
+    display: inline-grid;
+    grid:324px / auto auto auto auto;
+    grid-gap:60px;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    /* flex-basis: 25%; */
+    margin-top:20px;
+    margin-left:45px;
+    background:#E5E5E5;
+}
+.allAPI{
+    margin-left: 45px;
+}

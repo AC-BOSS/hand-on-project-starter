@@ -39,4 +39,5 @@ form{
     height: 44px;
     color: white;
     border: None;
+    cursor: pointer;
 }

@@ -65,6 +65,12 @@
 
     color: #566474;
 }
+.img_error {
+    color: red;
+    padding: 5px;
+    margin: 0px;
+    font-size: 14px;
+}
 .button{
     margin: 10px;
     background: #142683;

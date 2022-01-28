@@ -1,14 +1,16 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Dashboard from './pages/Dashboard/Dashboard';
+import BGRemover from './pages/BGRemover/BGRemover';
+import './App.css';
+// import Dashboard from './pages/Dashboard/Dashboard';
 // import Marketplace from './pages/Marketplace/Marketplace';
+
 
 function App() {
 	return (
 		<>
-			<Navbar />
-			<Dashboard />
+			{/* <Dashboard /> */}
 			{/* <Marketplace /> */}
+			<BGRemover />
 		</>
 	);
 }

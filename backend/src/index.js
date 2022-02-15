@@ -17,6 +17,7 @@ app.use(express.json());
 //Routes
 app.get("/", (req, res) => res.send("Hello World!"));
 app.use("/auth", require("./routes/auth"));
+app.use("/bgremover", require("./routes/bgremover"));
 
 app.listen(process.env.PORT, () => {
     console.log(`Backend server started on port ${process.env.PORT}`);

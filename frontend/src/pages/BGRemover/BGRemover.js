@@ -5,6 +5,9 @@ import Photo from '../../utils/images/api.png';
 import UploadImg from '../../utils/images/upload.svg';
 
 import {useDropzone} from 'react-dropzone';
+import axios from "axios";
+
+// const FormData = require('form-data');
 
 export default function BGRemover() {
     const [files, setFiles] = useState([]);
@@ -33,12 +36,31 @@ export default function BGRemover() {
             });
         }
     });
-
+    console.log(files[0]);
+    console.log(files[0]?.preview);
     const images = files.map((file) => (
         <div key={file.name}>
             <img src={file.preview} style={{width: "200px"}} alt="preview" />
         </div>
     ))
+
+    const submitImg = () => {
+        let formData = new FormData();
+        console.log(files[0]);
+        formData.append('file', files[0]);
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/bgremover/removebg`, formData)
+        .then((response) => {
+            // console.log(response.data);
+            const url = window.URL.createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+            console.log(url);
+            link.href = url;
+            link.setAttribute('download', 'image.png');
+            document.body.appendChild(link);
+            link.click();
+        })
+        .catch((err) => console.error(err));
+    }
     return (
         <>
             <Navbar />
@@ -58,6 +80,7 @@ export default function BGRemover() {
                         </p>
                         <p className={styles.img_description}>File should be jpg, png and less than 5mb</p>
                         <button className={styles.button} onClick={open}>Upload Image -&gt;</button>
+                        <button onClick={submitImg}>Submit</button>
                         <p className={styles.img_description}>Or drop a file</p>
                     </div>
                 </div>
